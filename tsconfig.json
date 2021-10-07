@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "declaration": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "sourceMap": true,
+      "outDir": "./dist",
+      "baseUrl": ".",
+      "strict": false,
+    },
+    "include": [
+      "index.ts",
+      "entities",
+      "enums",
+      "interfaces",
+      "views",
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
