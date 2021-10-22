@@ -1,4 +1,4 @@
-import { User } from "entities";
+import { User } from "./user.entity";
 import { ExternalSystem } from "../enums";
 import { Entity, Column, ManyToOne, Unique } from "typeorm";
 import { BaseEntity } from './base.entity';
