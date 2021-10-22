@@ -3,8 +3,9 @@
  * Database Table for storing user data.
  */
 import { Role } from '../enums';
-import { Column, Entity } from 'typeorm';
+import { Column, Entity, OneToMany } from 'typeorm';
 import { BaseEntity } from './base.entity';
+import { Account } from './account.entity';
 
 @Entity()
 export class User extends BaseEntity {
@@ -31,6 +32,9 @@ export class User extends BaseEntity {
 
     @Column({ type: 'enum', enum: Role , default: Role.user})
     role!: Role;
+
+    @OneToMany(() => Account, account => account.user, { cascade: ['insert', 'remove', 'update'] })
+    accounts!: Account[];
 
 
 }
